@@ -38,8 +38,6 @@ galleryRouter.post('/', upload.single("imagen"), async (request, response) => {
 
 galleryRouter.delete('/:id', async (request, response) => {
     const id = request.params.id;
-    console.log(id);
-    
 
     await Image.findByIdAndDelete(id);
 
