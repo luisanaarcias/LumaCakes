@@ -4,8 +4,7 @@ const createNav = (isAdmin) => {
     navbar.innerHTML = `
     <div class="max-w-7xl h-16 mx-auto flex items-center px-6 justify-between">
         <div class="flex flex-1 items-center gap-2 h-10">
-            <img src="/images/user/logo.png" alt="logo" class="bg-[#291e16]/90 h-full w-10 rounded-full">
-            <div class="bg-[#291e16]/90 h-full w-10 rounded-full"></div>
+            <img src="/images/user/logo.png" alt="logo" class="h-full w-10 rounded-full">
             <p class="font-bold text-lg text-[#291e16]/90">LumaCakes</p>
         </div>
 
@@ -30,6 +29,7 @@ const createNav = (isAdmin) => {
                 <span class="text-2xl">Contacto</span>
                 <span class="absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-300 origin-left scale-x-0 group-hover:scale-x-100 w-full"></span>
             </a>
+            
             ${isAdmin 
                 ? `<a href="/administrador" class="group w-fit px-2 cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#291e16" class="h-20 group-hover:scale-120 stroke-white transition-all">
