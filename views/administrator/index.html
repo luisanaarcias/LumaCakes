@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumaCakes | Administrador</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<!-- [#FFC5C5] Carne, [#FF5580] Fucsia, [#493628] Cafe oscuro -->
+<body class="flex flex-col min-h-screen"></body>
+    <!-- Nav -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-20 bg-[#FFC5C5] h-16"></nav>
+    <!-- Main Container -->
+    <main class="flex flex-col xl:flex-row max-w-6xl pb-16 pt-24 xl:pt-30 mx-auto sm:gap-y-10 grow">
+        <form id="form" class="flex xl:flex-1 flex-col max-w-[40rem] px-6 py-8 mx-auto gap-6 bg-[#FFC5C5]/30 sm:rounded-3xl xl:rounded-s-3xl xl:rounded-e-none">
+            <h2 class="text-xl text-[#493628]">Ingresa la nueva imagen que se mostrará en la galería</h2>
+            <div class="w-full h-[30rem] p-2 md:p-4 bg-[#FF5580] rounded-2xl overflow-hidden">
+                <img id="image-preview" src="" alt="Imagen subida" class="hidden size-full object-contain">
+            </div>
+            <div class="flex flex-col sm:flex-row w-full gap-4">
+                <input type="file" id="input-file" name="imagen" accept="image/*" class="sm:flex-2 w-full py-2 px-4 bg-transparent border-4 border-[#493628] text-black rounded-xl">
+                <input type="submit" value="Guardar" class="sm:flex-1 w-full py-2 px-4 bg-[#493628] text-white rounded-xl cursor-pointer hover:translate-y-[-0.3rem] transition-all">
+            </div>
+        </form>
+        <section class="flex xl:flex-1 flex-col max-w-[50rem] px-6 py-10 mx-auto gap-6 text-md text-white bg-[#FF5580] sm:rounded-3xl xl:rounded-e-3xl xl:rounded-s-none">
+            <h3>Presiona la <strong>X</strong> que aparece sobre la imagen para eliminarla de la galería</h3>
+            <ul id="ul" class="flex flex-wrap justify-center max-h-[33.5rem] gap-4 overflow-y-auto"></ul>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="pt-16 pb-12 px-8 w-full h-fit bg-[#493628]">
+        <div class="flex flex-col text-center text-white/80">
+            <p>Estamos ubicados en El Vigía, Mérida, Venezuela</p>
+            <div class="my-6 mx-auto w-fit hover:scale-x-110 transition-all">
+                <a href="/contacto" class="py-3 px-8 w-full max-w-80 border-2 border-white rounded-lg">¡CONTACTANOS!</a>
+            </div>
+            <p>Desarrollado por Luisana Arcias</p>
+            <p>Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="/components/nav.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

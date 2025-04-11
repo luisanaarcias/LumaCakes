@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumaCakes | Gallery</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body class="flex flex-col min-h-screen m-0">
+    <!-- Nav -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-20 bg-[#FFC5C5] h-16"></nav>
+    <!-- Contenedor principal -->
+    <main class="flex flex-col grow max-w-[95rem] pt-16 mx-8 2xl:mx-auto">
+        <header class="w-full pt-6 pb-4 lg:py-20 text-4xl md:text-5xl lg:text-6xl text-[#493628]">
+            <h1>Galeria de tortas y postres</h1>
+        </header>
+        <section class="w-full overflow-x-hidden">
+            <ul class="flex flex-nowrap w-full py-6 gap-6 text-white overflow-x-scroll">
+                <li class="flex flex-col h-120 w-60 min-w-60 bg-[#FF5580] rounded-lg">
+                    <div class="group overflow-hidden">
+                        <img src="/images/gallery/tortaTresLeches.jpeg" alt="tortaPostre" class="rounded-t-lg group-hover:scale-110 transition-all">
+                    </div>
+                    <div class="flex flex-col gap-1 p-4">
+                        <h3 class="h-20% font-bold text-lg text-center">Torta tres leches</h3>
+                        <div>
+                            <p>Cantidad de porciones recomendadas: 10</p>
+                            <p>Relleno de dulce de leche</p>
+                            <p>Topping: chantilly</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex flex-col h-120 w-60 min-w-60 bg-[#FF5580] rounded-lg">
+                    <div class="group overflow-hidden">
+                        <img src="/images/gallery/tortaQuesipiña.jpeg" alt="tortaPostre" class="rounded-t-lg group-hover:scale-110 transition-all">
+                    </div>
+                    <div class="flex flex-col gap-1 p-4">
+                        <h3 class="h-20% font-bold text-lg text-center">Torta Quesipiña</h3>
+                        <div>
+                            <p>Porciones recomendadas: 10</p>
+                            <p>Relleno: quesillo</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex flex-col h-120 w-60 min-w-60 bg-[#FF5580] rounded-lg">
+                    <div class="group overflow-hidden">
+                        <img src="/images/gallery/cakeTradicional.jpeg" alt="tortaPostre" class="rounded-t-lg group-hover:scale-110 transition-all">
+                    </div>
+                    <div class="flex flex-col gap-1 p-4">
+                        <h3 class="h-20% font-bold text-lg text-center">Cake tradicional</h3>
+                        <div>
+                            <p>Porciones recomendadas: 20</p>
+                            <p>Ponque de vainilla con arequipe</p>
+                            <p>Cubierta: arequipe</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex flex-col h-120 w-60 min-w-60 bg-[#FF5580] rounded-lg">
+                    <div class="group overflow-hidden">
+                        <img src="/images/landing/secondDessertMain.jpeg" alt="tortaPostre" class="rounded-t-lg group-hover:scale-110 transition-all">
+                    </div>
+                    <div class="flex flex-col gap-1 p-4">
+                        <h3 class="h-20% font-bold text-lg text-center">Quesillo</h3>
+                        <div>
+                            <p>Porciones recomendadas: 16</p>
+                            <p>Tamaño 24cm</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex flex-col h-120 w-60 min-w-60 bg-[#FF5580] rounded-lg">
+                    <div class="group overflow-hidden">
+                        <img src="/images/gallery/tortaQuesillo.jpeg" alt="tortaPostre" class="rounded-t-lg group-hover:scale-110 transition-all">
+                    </div>
+                    <div class="flex flex-col gap-1 p-4">
+                        <h3 class="h-20% font-bold text-lg text-center">Torta quesillo</h3>
+                        <div>
+                            <p>Porciones recomendadas: 8</p>
+                            <p>Ponque de vainilla con quesillo</p>
+                            <p>Topping: dulce de leche</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex flex-col h-120 w-60 min-w-60 bg-[#FF5580] rounded-lg">
+                    <div class="group overflow-hidden">
+                        <img src="/images/landing/firstDessertSection.jpeg" alt="tortaPostre" class="rounded-t-lg group-hover:scale-110 transition-all">
+                    </div>
+                    <div class="flex flex-col gap-1 p-4">
+                        <h3 class="h-20% font-bold text-lg text-center">Galleta chocochip</h3>
+                        <div>
+                            <p>Contiene gotas de chocolate</p>
+                            <p>Peso: 30 gramos</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex flex-col h-120 w-60 min-w-60 bg-[#FF5580] rounded-lg">
+                    <div class="group overflow-hidden">
+                        <img src="/images/gallery/galletaAlfajores.jpeg" alt="tortaPostre" class="rounded-t-lg group-hover:scale-110 transition-all">
+                    </div>
+                    <div class="flex flex-col gap-1 p-4">
+                        <h3 class="h-20% font-bold text-lg text-center">Galleta y alfajores</h3>
+                        <div>
+                            <p>Ideal para celebraciones</p>
+                            <p>Caja contiene 8 alfajores y 10 galletas de 20 gramos</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="w-full my-12 md:my-26">
+            <ul id="ul" class="flex flex-wrap justify-center w-full h-fit p-6 lg:p-12 gap-2 border-dashed border-6 border-[#FF5580] rounded-3xl"></ul>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="pt-16 pb-12 px-8 w-full h-fit bg-[#493628]">
+        <div class="flex flex-col text-center text-white/80">
+            <p>Estamos ubicados en El Vigía, Mérida, Venezuela</p>
+            <div class="my-6 mx-auto w-fit hover:scale-x-110 transition-all">
+                <a href="/contacto" class="py-3 px-8 w-full max-w-80 border-2 border-white rounded-lg">¡CONTACTANOS!</a>
+            </div>
+            <p>Desarrollado por Luisana Arcias</p>
+            <p>Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <script src="/components/nav.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

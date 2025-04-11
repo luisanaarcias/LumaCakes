@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumaCakes | Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<!-- [#FFC5C5] Carne, [#FF5580] Fucsia, [#493628] Cafe oscuro -->
+<body class="scroll-smooth h-auto">
+    <!-- Figura decorativa del fondo version mobile y destock -->
+    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" fill="#FFC5C5" viewBox="0 0 100 100" 
+        id="decorative-figure-destock" class="h-screen w-full min-w-[1024px] absolute top-0 left-0 right-0 z-[-1] hidden lg:block">
+        <path stroke-linecap="round" stroke-linejoin="round" d="
+            M20,29
+            L60,29
+            Q76,29 75,16
+            Q75,3 60,3
+            L0,3
+            L0,0
+            L100,0
+            L100,100
+            L0,100
+            L0,55
+            Q0,45 10,45
+            L10,39
+            Q10,29 20,29
+            Z
+        "/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" fill="#FFC5C5" viewBox="0 0 100 100" 
+        id="decorative-figure-mobile" class="h-screen w-full absolute top-0 left-0 right-0 z-[-1] lg:hidden">
+        <path stroke-linecap="round" stroke-linejoin="round" d="
+            M0,29
+            L99.5,29
+            L99.5,3
+            L0,3
+            L0,0
+            L100,0
+            L100,100
+            L0,100
+        "/>
+    </svg>
+    <!-- Nav -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-20 bg-[#FFC5C5] h-16"></nav>
+    <!-- Contenedor Principal -->
+    <main class="flex flex-col gap-12 pt-20">
+        <!-- Main section -->
+        <section class="flex flex-col items-center px-8 h-fit max-w-7xl mx-auto relative">
+            <img src="/images/landing/fondo.png" alt="Fondo" class="absolute size-full lg:px-30 pb-60 pt-5 opacity-40 object-cover z-[-2]">
+            <article class="flex flex-col sm:flex-row-reverse justify-center w-full h-[90vh] gap-4 sm:gap-8">
+                <div class="flex sm:items-center justify-center h-[20%] sm:h-full sm:w-1/3">
+                    <div class="p-1 sm:p-2 lg:p-4 sm:h-[55%] rounded-full border-dotted border-4 md:border-6 lg:border-8 border-[#FF5580]">
+                        <img id="user-picture" src="/images/user/firstImage.jpeg" alt="mi foto"
+                            class="size-full rounded-full border-4 border-[#FF5580] object-cover"
+                        >
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center gap-8 max-w-3xl sm:w-2/3">
+                    <div class="flex flex-col items-center max-w-2xl mx-auto relative z-10">
+                        <div class="h-fit text-[#FF5580] text-lg">
+                            <div class="w-full text-start text-xl">
+                                <span class="w-full lg:px-[10%]">¡Hola! Bienvenid@ a</span>
+                            </div>
+                            <h1 class="text-center text-[5rem] lg:text-[7rem] font-semibold leading-none">Luma Cakes</h1>
+                            <div class="w-full text-end pt-3 text-xl">
+                                <span class="w-full lg:px-[10%]">¿Te apetece algo dulce?</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-black md:text-[#493628] lg:text-lg">
+                        Cada postre y torta se hace con dedicación y cariño, dándole ese toque casero que los hace únicos. Trabajamos por encargo para que recibas justo lo que imaginas, desde los clásicos de siempre hasta creaciones personalizadas. Desde cursos profesionales hasta postres y tortas, donde cada pedido es especial y cada sabor cuenta una historia. ¡Gracias por visitarnos y confiar en lo hecho con amor!
+                    </p>
+                </div>
+            </article>
+            <div class="flex flex-col sm:flex-row items-center gap-12 pb-26 pt-8 w-full h-fit">
+                <img src="/images/landing/firstDessertMain.jpeg" alt="Postre" class="bg-[#493628] w-[70%] sm:w-1/3 h-40 lg:h-60 hover:scale-105 rounded-lg object-cover border-6 border-[#FF5580] transition-all">
+                <img src="/images/landing/firstCakeMain.jpeg" alt="torta" class="bg-[#493628] w-[80%] sm:w-1/3 h-68 lg:h-76 hover:scale-105 rounded-lg object-cover border-6 border-[#FF5580] transition-all">
+                <img src="/images/landing/secondDessertMain.jpeg" alt="Postre" class="bg-[#493628] w-[70%] sm:w-1/3 h-40 lg:h-60 hover:scale-105 rounded-lg object-cover border-6 border-[#FF5580] transition-all">
+            </div>
+        </section>
+        <!-- Dulces y postres -->
+        <section class="flex flex-col sm:flex-row items-center sm:items-stretch gap-12 py-20 px-8 2xl:px-20 h-fit sm:h-full sm:w-[95%] max-w-7xl mx-auto bg-white sm:rounded-2xl shadow-md">
+            <article class="flex flex-col sm:flex-1 justify-center gap-8 w-full sm:w-auto">
+                <h2 class="text-center text-[3rem] text-[#493628] font-semibold leading-none">Dulces y Postres</h2>
+                <p class="text-[#493628] xl:text-lg">
+                    Aquí te endulzamos la vida con postres y dulces personalizados, hechos con ingredientes de calidad y mucho amor. Nos adaptamos a tus gustos, necesidades y también a tu presupuesto, porque creemos que disfrutar algo rico no debería ser un lujo. Trabajamos bajo encargo para ofrecerte opciones deliciosas, únicas y accesibles para cualquier ocasión.
+                </p>
+            </article>
+            <div class="group flex sm:flex-col lg:flex-row sm:flex-1 items-center justify-center gap-8 w-full sm:w-auto">
+                <img src="/images/landing/firstDessertSection.jpeg" alt="Galleta" class="group-hover:scale-105 sm:flex-1 bg-[#493628] h-[20vh] sm:h-[25vh] w-[35vw] lg:w-[25vw] 2xl:w-[15vw] border-4 border-[#493628] object-cover rounded-lg shadow-lg/40 transition-all">
+                <img src="/images/landing/secondDessertSection.jpeg" alt="Brazo gitano" class="group-hover:scale-105 sm:flex-1 bg-[#493628] h-[20vh] sm:h-[25vh] w-[35vw] lg:w-[25vw] 2xl:w-[15vw] border-4 border-[#493628] object-cover rounded-lg shadow-lg/40 transition-all">
+            </div>
+        </section>
+        <!-- Tortas personalizadas -->
+        <section id="personalized-cakes" class="flex flex-col gap-8 sm:gap-12 px-8 py-20 h-fit max-w-7xl mx-auto">
+            <h2 class="text-start sm:text-center text-[2rem] sm:text-[6.5vw] text-[#FF5580] font-semibold leading-none">Tortas Personalizadas</h2>
+            <div class="flex sm:flex-row-reverse h-full gap-4 sm:gap-8">
+                <p class="flex-2 lg:flex-1 sm:px-[5%] xl:pt-[5%] md:text-xl xl:text-2xl">
+                    Nuestras tortas personalizadas están pensadas para adaptarse a cualquier ocasión, desde celebraciones íntimas hasta grandes eventos. Ofrecemos una amplia variedad de sabores, estilos y decoraciones, siempre cuidando cada detalle para que la calidad y el sabor sean memorables. Aquí la creatividad no tiene límites, y cada torta se convierte en el centro perfecto de tu celebración.
+                </p>
+                <div class="flex flex-col lg:flex-row flex-1 lg:flex-2 gap-4 max-h-[40rem] overflow-y-hidden rounded-full">
+                    <div class="bg-[#FF5580] h-[25%] lg:h-full w-full rounded-lg"></div>
+                    <img src="/images/landing/personalizedSection.jpeg" alt="torta" class="bg-[#FF5580] h-[50%] lg:h-full w-full rounded-lg object-contain">
+                    <div class="bg-[#FF5580] h-[25%] lg:h-full w-full rounded-lg"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Mejores trabajos -->
+        <section class="flex gap-14 px-8 py-12 w-full h-fit mx-auto max-w-2xl">
+            <aside class="flex flex-col flex-1 items-center justify-center gap-8">
+                <div class="flex flex-col items-center py-8 border-2 border-[#493628] rounded-full text-xl sm:text-3xl font-normal w-12 lg:w-16">
+                    <span>D</span>
+                    <span>E</span>
+                    <span>S</span>
+                    <span>T</span>
+                    <span>A</span>
+                    <span>C</span>
+                    <span>A</span>
+                    <span>D</span>
+                    <span>O</span>
+                    <span>S</span>
+                </div>
+                <div class="flex flex-col items-center justify-center gap-4 py-4 w-12 lg:w-16 bg-[#493628] hover:bg-[#38291f] hover:scale-105 rounded-full transition-all">
+                    <a href="/galeria" class="flex items-center size-10 hover:scale-110 transition-all">
+                        <svg class="size-full stroke-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75-1.5.75a3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0L3 16.5m15-3.379a48.474 48.474 0 0 0-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 0 1 3 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 0 1 6 13.12M12.265 3.11a.375.375 0 1 1-.53 0L12 2.845l.265.265Zm-3 0a.375.375 0 1 1-.53 0L9 2.845l.265.265Zm6 0a.375.375 0 1 1-.53 0L15 2.845l.265.265Z" />
+                        </svg>                      
+                    </a>
+                    <a href="/cursos" class="flex items-center size-10 hover:scale-110 transition-all">
+                        <svg class="size-full stroke-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                        </svg>                      
+                    </a>
+                    <a href="/contacto" class="flex items-center size-10 hover:scale-110 transition-all">
+                        <svg class="size-full stroke-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                        </svg>                      
+                    </a>
+                </div>
+            </aside>
+            <div class="flex flex-col flex-3 gap-12">
+                <img src="/images/landing/firstCakeMain.jpeg" alt="torta" class="bg-[#FF5580] w-[90%] h-[20vh] lg:h-[30vh] translate-x-8 object-contain border-4 border-[#FF5580] rounded-lg">
+                <img src="/images/landing/outstanding1.jpeg" alt="torta" class="bg-[#FF5580] w-[90%] h-[20vh] lg:h-[30vh] translate-x-[-2rem] object-contain border-4 border-[#FF5580] rounded-lg">
+                <img src="/images/landing/outstanding4.jpeg" alt="torta" class="bg-[#FF5580] w-[90%] h-[20vh] lg:h-[30vh] translate-x-8 object-contain border-4 border-[#FF5580] rounded-lg">
+                <img src="/images/landing/secondDessertSection.jpeg" alt="torta" class="bg-[#FF5580] w-[90%] h-[20vh] lg:h-[30vh] translate-x-[-2rem] object-contain border-4 border-[#FF5580] rounded-lg">
+            </div>
+        </section>
+        <!-- Cursos -->
+        <section class="flex flex-row gap-y-4 gap-x-8 pt-16 pb-28 px-8 lg:px-30 mx-auto mb-16  w-full lg:w-[95%] h-fit max-w-7xl relative bg-[#493628]/90 text-white lg:rounded-2xl">
+            <div class="flex flex-col lg:flex-2 gap-12 relative z-10">
+                <article class="flex flex-col gap-4">
+                    <h2 class="text-center lg:text-start text-[3rem] font-semibold leading-none">Cursos</h2>
+                    <p>
+                        ¿Quieres aprender repostería de forma práctica y accesible? En esta sección encontrarás cursos pensados para todos los niveles, con un alto enfoque en la calidad. La repostería sigue creciendo y la demanda de productos bien hechos no para, por eso estos cursos están diseñados para ayudarte a destacar, ya sea por pasión o para emprender tu propio camino.
+                    </p>
+                </article>
+                <aside class="flex flex-col gap-4 text-[#493628]">
+                    <a href="/cursos" class="flex flex-col py-2 px-4 w-full bg-white rounded-lg hover:scale-x-105 transition-all">
+                        <strong class="flex flex-1">Primera edición QUESIPIÑA</strong>
+                        <p class="flex flex-1">Aprenderás a elaborar: Almíbar para un desmolde perfecto 👌Ponque desde...</p>
+                    </a>
+                    <a href="/cursos" class="flex flex-col py-2 px-4 w-full bg-white rounded-lg hover:scale-x-105 transition-all">
+                        <strong class="flex flex-1">Curso BESO DE ANGEL</strong>
+                        <p class="flex flex-1">Aprenderás a elaborar un bizcocho con estructura. Un delicioso Quesillo/Flan cremoso...</p>
+                    </a>
+                </aside>
+            </div>
+            <div class="flex lg:flex-1 justify-center items-center absolute lg:static z-0 top-[50%] left-[50%] translate-x-[-50%] lg:translate-x-0 translate-y-[-80%] lg:translate-y-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[25vw] min-w-[18rem] min-h-[18rem] lg:size-[20vw] stroke-white/40">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                </svg>                  
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="pt-26 pb-16 px-8 bg-[#493628]">
+        <div class="flex flex-col text-center text-white/80">
+            <p>Estamos ubicados en El Vigía, Mérida, Venezuela</p>
+            <div class="my-6 mx-auto w-fit hover:scale-x-110 transition-all">
+                <a href="/contacto" class="py-3 px-8 w-full max-w-80 border-2 border-white rounded-lg">¡CONTACTANOS!</a>
+            </div>
+            <p>Desarrollado por Luisana Arcias</p>
+            <p>Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <script src="/components/nav.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
