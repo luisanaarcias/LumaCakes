@@ -8,7 +8,6 @@ const userExtractor = async (request, response, next) => {
 
 		//  si no existe el token enviamos un error de estatus 401 que significa que no esta autorizado
 		if (!token) {
-		console.log('chao');
 			return response.sendStatus(401);
 		}
 
