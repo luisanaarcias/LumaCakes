@@ -132,4 +132,4 @@ setTimeout(() => {
             console.log(error);
         }
     })
-}, 50);
+}, 100);
