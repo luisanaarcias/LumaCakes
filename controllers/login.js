@@ -1,6 +1,6 @@
 const loginRouter = require("express").Router();
 const User = require("../models/user");
-const bbcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 // logica cuando el usuario se logea
@@ -8,18 +8,20 @@ loginRouter.post("/", async (request, response) => {
 	const {email, password} = request.body;
 	const userExist = await User.findOne({email});
 
-	const isCorrect = await bbcrypt.compare(password, userExist.passwordHash);
+	if (!userExist) {
+		return response.status(400).json({error: "email o contraseña invalido"});
+	}
+
+	const isCorrect = await bcrypt.compare(password, userExist.passwordHash);
 
 	if (!isCorrect) {
 		return response.status(400).json({error: "email o contraseña invalido"});
 	}
 
 	const userForToken = {
-		// id: userExist.id.Router,
 		id: userExist._id.toString(),
 	};
 
-	// console.log("userforToken", userExist._id.toString());
 	const accesToken = jwt.sign(userForToken, process.env.ACCESS_TOKEN_SECRET, {
 		expiresIn: "1d",
 	});
