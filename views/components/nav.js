@@ -95,7 +95,7 @@ const adminVerify = async () => {
 adminVerify()
 
 setTimeout(() => {
-    const navBtn = navbar.children[0];
+    let navBtn = navbar.children[0];
     navBtn = navBtn.children[1];
     
     navBtn.addEventListener('click', e => {
