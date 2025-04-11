@@ -115,7 +115,7 @@ setTimeout(() => {
     })
     
     const closeBtnDescktop = navbar.children[0].children[4].children[0];
-    const closeBtnMobile = navbar.children[0].children[2].children[4];
+    const closeBtnMobile = navbar.children[0].children[2].children[5];
     
     closeBtnDescktop.addEventListener('click', async e => {
         try {
@@ -133,4 +133,4 @@ setTimeout(() => {
             console.log(error);
         }
     })
-}, 100);
+}, 400);

@@ -25,7 +25,6 @@ inputFile.addEventListener("change", function() {
 async function cargarImagenesBase64() {
     try {
         const response = await axios.get('/api/gallery');
-        console.log('paso el axios');
         const imagenes = response.data;
 
         contenedor.innerHTML = '';
