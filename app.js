@@ -50,8 +50,8 @@ app.use("/images/gallery", express.static(path.resolve("img", "gallery")));
 app.use("/api/users", usersRouter);
 app.use("/api/login", loginRouter);
 app.use("/api/logout", logoutRouter);
+app.use("/api/gallery/img", galleryImgRouter);
 app.use("/api/gallery", userExtractor, galleryRouter);
-app.use("/api/gallery/img", userExtractor, galleryImgRouter);
 
 app.use(morgan("tiny"));
 

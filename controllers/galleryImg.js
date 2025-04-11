@@ -2,8 +2,11 @@ const galleryImgRouter = require("express").Router();
 const Image = require("../models/image");
 
 galleryImgRouter.get('/', async (request, response) => {
+    console.log('hola');
+
     const images = await Image.find({});
 
+    
     const result = images
     .filter(img => img.imagen && img.imagen.data && img.imagen.contentType)
     .map(img => ({

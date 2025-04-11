@@ -3,10 +3,12 @@ const User = require("../models/user");
 
 const userExtractor = async (request, response, next) => {
 	try {
+
 		const token = request.cookies?.accesToken;
 
 		//  si no existe el token enviamos un error de estatus 401 que significa que no esta autorizado
-		if (!token) {			
+		if (!token) {
+		console.log('chao');
 			return response.sendStatus(401);
 		}
 
