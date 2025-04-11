@@ -29,7 +29,7 @@ const createNav = (isAdmin) => {
                 <span class="text-2xl">Contacto</span>
                 <span class="absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-300 origin-left scale-x-0 group-hover:scale-x-100 w-full"></span>
             </a>
-            
+
             ${isAdmin 
                 ? `<a href="/administrador" class="group w-fit px-2 cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#291e16" class="h-20 group-hover:scale-120 stroke-white transition-all">
@@ -114,7 +114,7 @@ setTimeout(() => {
     })
     
     const closeBtnDescktop = navbar.children[0].children[4].children[0];
-    const closeBtnMobile = navbar.children[0].children[2].children[5];
+    const closeBtnMobile = navbar.children[0].children[2].children[4];
     
     closeBtnDescktop.addEventListener('click', async e => {
         try {
